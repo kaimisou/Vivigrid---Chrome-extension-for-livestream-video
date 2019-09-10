@@ -1,0 +1,33 @@
+{
+  "name": "Vivigrid",
+  "description": "video grid",
+  "version": "1.0.0.7",
+  "permissions": [
+    "storage",
+    "https://sp.live.nicovideo.jp/favorites?777",
+    "https://www.youtube.com/results?search_query=20190831_20240831"
+  ],
+
+ "content_scripts": [
+    {
+      "matches":  [ "*://www.youtube.com/*" ],
+      "js": ["script.js"]
+    }
+  ],
+ "icons": { 
+    "48": "images/Youtube-blue.png"     
+  },
+  "web_accessible_resources":[
+    "images/*"
+
+    ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    
+    
+  },
+  "manifest_version": 2
+}
